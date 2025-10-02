@@ -1,42 +1,42 @@
 import os
 def create():
-    notes = input("Enter note text: ")
+    notes = input("введите текст записки: ")
     with open("notes.txt", "a") as file:
         file.write(notes + "\n")
-    print("Note created successfully.")
+    print("сохранилась записка")
 def delete():
     with open("notes.txt", "r") as file:
         notes = file.readlines()
     if not notes:
-        print("No notes to delete.")
+        print("нету таких заметок чтобы удалить.")
         return
 
-    print("\nNotes list:")
+    print("\nСписок записок:")
     for i, note in enumerate(notes, 1):
         print(f"{i}. {note.strip()}")
-    numb = int(input("Enter note number to delete: "))
+    numb = int(input("номер для удаления: "))
     if numb < 1 or numb > len(notes):
-        print("Invalid note number.")
+        print("неправильный номер заметки")
         return
     del notes[numb - 1]
     with open("notes.txt", "w") as file:
         for note in notes:
             file.write(note)
-    print(f"Note #{numb} deleted successfully.")
+    print(f"Заметка #{numb} была удалена")
 def search():
     try:
         with open("notes.txt", "r") as file:
             notes = file.readlines()
     except FileNotFoundError:
-        print("No notes found.")
+        print("Нету таких заметок")
         return
     if not notes:
-        print("No notes to search.")
+        print(нет таких заметок")
         return
-    print("\nAll notes:")
+    print("\Все заметки:")
     for i, note in enumerate(notes, 1):
         print(f"{i}. {note.strip()}")
-    keyword = input("\nEnter keyword to search: ").lower()
+    keyword = input("\nвведите слово для поиска ").lower()
     found_notes = []
     for i, note in enumerate(notes, 1):
         if keyword in note.lower():
@@ -48,7 +48,7 @@ def search():
         for note in found_notes:
             print(note)
     else:
-        print("No notes found with this keyword.")
+        print("нету таких")
 
 def close():
     exit()
@@ -57,12 +57,12 @@ def show():
         with open("notes.txt", "r") as file:
             notes = file.readlines()
     except FileNotFoundError:
-        print("No notes found.")
+        print("Нету таких")
         return
     if not notes:
-        print("No notes available.")
+        print("Нету таких")
     else:
-        print("\nAll notes:")
+        print("\nСписок заметок:")
         for i, note in enumerate(notes, 1):
             print(f"{i}. {note.strip()}")
 def interface():
