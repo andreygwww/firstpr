@@ -1,0 +1,4 @@
+c:\Users\user\Desktop\tpp 2025\Projects\project2\game\game\obj\Debug\net9.0\game.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\user\Desktop\tpp 2025\Projects\project2\game\game\obj\Debug\net9.0\game.AssemblyInfoInputs.cache
+c:\Users\user\Desktop\tpp 2025\Projects\project2\game\game\obj\Debug\net9.0\game.AssemblyInfo.cs
+c:\Users\user\Desktop\tpp 2025\Projects\project2\game\game\obj\Debug\net9.0\game.csproj.CoreCompileInputs.cache
